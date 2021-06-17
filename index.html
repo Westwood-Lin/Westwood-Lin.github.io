@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -147,6 +147,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/06/C-Primer-Note1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yalin Feng">
+      <meta itemprop="description" content="It is just a try. I actually want to deploy this blog on Alibaba. But that requires time">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Welcome to Yalin's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/06/C-Primer-Note1/" class="post-title-link" itemprop="url">C++ Note1</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-06 10:40:04" itemprop="dateCreated datePublished" datetime="2021-06-06T10:40:04+08:00">2021-06-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-17 21:02:03" itemprop="dateModified" datetime="2021-06-17T21:02:03+08:00">2021-06-17</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="C-Note1"><a href="#C-Note1" class="headerlink" title="C++ Note1"></a>C++ Note1</h1><h3 id="C-Primer-Part1"><a href="#C-Primer-Part1" class="headerlink" title="C++  Primer Part1"></a>C++  Primer Part1</h3><p>​    </p>
+<p>第一部分就第一章，没什么内容；</p>
+<p>1.简介了iostream库，包括2个类 istream和ostream，cin是istream类的对象实例，cout、cerr、clog是ostream类的对象实例；</p>
+<p>2.&gt;&gt;和&lt;&lt;运算符本质上是语法糖，因为istream和ostream是定义在头文件中，对&lt;&lt;和&gt;&gt;的重载必须是全局函数；</p>
+<p>​    函数的参数是一个绑定stream对象的引用，另一边是个变量或常量；同样返回一个stream对象的引用；</p>
+<p>3.命名空间、作用域运算符 ::</p>
+<p>4.循环输入的最简单方式：</p>
+<p>​    int value;</p>
+<p>​    while(cin&gt;&gt;value){ do sth; }</p>
+<p>5.第一章涉及概念</p>
+<p>​    argument / parameter.    function.    return type.    signature.    body.    name.</p>
+<p>​    block.    *buffer.    built-in type.    library type.    (character) string literal.    comment.</p>
+<p>​    condition.    curly brace.    edit-compile-debug.    expression.    statement.    data structure.</p>
+<p>​    EOF.    initialize.     *uninitialized varible.    source file.    header.    #include</p>
+<p>​    class.    namespace.    iostream.    cin    cout    clog    cerr.    *manipulator.    method.     member function.</p>
+<p>std.    standard input.    standard output.    standard error.    </p>
+<p>​    Operator:    &gt;, &gt;=, &lt;, &lt;=, ==, !=, ++, –, +=, =</p>
+<p>​                        &gt;&gt;, &lt;&lt;,  .  , :: , ()</p>
+<p>*buffer :为解决IO设备和CPU的速度差，在两者间增加了一个buffer。buffer是一块存储区域。IO设备将输入或输出的数据保存在缓冲区中；可以显式地刷新缓冲区，以便将正确地让程序从console读取输入/产生到屏幕的输出。</p>
+<p>​    例如：一个常见的错误：在 cin之后用getline</p>
+<p>​    {    int intA;     string strB;</p>
+<p>cin&gt;&gt;intA;    getline(cin,strB);</p>
+<p>} 中输入 2 [endl] hello [EOF]. </p>
+<p>​    会发现strB不能读入”hello”. 这是因为缓冲区同样会记录回车的 [endl]，getline（）从缓冲区读入，读到的第一个字符就是endl，直接就返回了。</p>
+<p>​                    </p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -247,6 +342,13 @@
 
       <time title="创建时间：2021-04-30 13:15:50" itemprop="dateCreated datePublished" datetime="2021-04-30T13:15:50+08:00">2021-04-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-06 18:21:34" itemprop="dateModified" datetime="2021-06-06T18:21:34+08:00">2021-06-06</time>
+      </span>
 
   
 </div>
